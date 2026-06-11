@@ -1,0 +1,16 @@
+{
+  "short_name": "CariTakip",
+  "name": "Müşteri Veresiye & Cari Takip Sistemi",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5621/5621115.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "background_color": "#ffffff",
+  "theme_color": "#2c3e50",
+  "display": "standalone",
+  "orientation": "portrait"
+}
