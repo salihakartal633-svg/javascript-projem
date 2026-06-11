@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İnşaat Stok ve Müşteri Cari Takip Programı</title>
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d6efd">
     <style>
         :root {
             --bg-color: #eef2f5;
@@ -743,18 +745,27 @@
         document.getElementById(tabId).classList.add('active');
         if(element) element.classList.add('active');
     }
-
-    // Sayfa yükleme
+ 
+ // Sayfa yükleme
     document.addEventListener("DOMContentLoaded", () => {
         loadAllData();
         const bugun = new Date().toISOString().split('T')[0];
         document.getElementById("alim-tarih").value = bugun;
         document.getElementById("satis-tarih").value = bugun;
         document.getElementById("tahsilat-tarih").value = bugun;
-        document.getElementById("rapor-baslangic").value = new Date(Date.now() - 7*86400000).toISOString().split('T')[0];
+        document.getElementById("rapor-baslangic").value = new Date(Date.now() - 7*24*60*60*1000).toISOString().split('T')[0];
         document.getElementById("rapor-bitis").value = bugun;
         yenileTablolar();
     });
+
+    // ========== BURAYI EKLEYİN ==========
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js");
+    }
+    // ====================================
+</script>
+</body>
+</html>
 </script>
 </body>
 </html>
